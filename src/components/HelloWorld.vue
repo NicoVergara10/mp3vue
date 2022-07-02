@@ -7,7 +7,9 @@
     />
     <button id="cancionBuscar" @click="buscarCancion">BUSCAR</button>
   </div>
-  <SongCard :canciones="canciones"></SongCard>
+  <div class="songCard">
+    <SongCard :canciones="canciones"></SongCard>
+  </div>
 </template>
 
 <script>
@@ -52,5 +54,12 @@ li {
 }
 a {
   color: #42b983;
+}
+.songCard {
+  border: 1px solid black;
+  margin-left: 200px;
+  margin-right: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px -6px black;
 }
 </style>

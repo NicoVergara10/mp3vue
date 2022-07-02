@@ -11,8 +11,14 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin: 0;
+  width: 100%;
 }
-
+body {
+  background-image: url(./assets/Fondoapp.jpg);
+  margin: 0;
+  background-attachment: fixed;
+}
 nav {
   padding: 30px;
 }

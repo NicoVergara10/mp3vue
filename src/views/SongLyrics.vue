@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="letra">
     <h3>{{ cancion }}</h3>
     <h4>{{ artista }}</h4>
     <pre>{{ letra.lyrics }}</pre>
@@ -37,3 +37,12 @@ export default {
   },
 };
 </script>
+<style>
+.letra {
+  border: 1px solid black;
+  margin-left: 200px;
+  margin-right: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px -6px black;
+}
+</style>
