@@ -1,5 +1,7 @@
 <template>
   <div class="about">
+    <h3>{{ cancion }}</h3>
+    <h4>{{ artista }}</h4>
     <pre>{{ letra.lyrics }}</pre>
   </div>
 </template>
