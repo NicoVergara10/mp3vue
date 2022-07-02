@@ -10,7 +10,17 @@
       <p>{{ (cancion.length / 1000 / 60).toFixed(2) }} mins</p>
     </div>
     <div class="img">
-      <i class="uil uil-align-letter-right"></i>
+      <router-link
+        :to="{
+          name: 'SongLyrics',
+          params: {
+            artista: cancion['artist-credit'][0].name,
+            cancion: cancion.title,
+          },
+        }"
+      >
+        <i class="uil uil-align-letter-right"></i>
+      </router-link>
     </div>
   </div>
 </template>
