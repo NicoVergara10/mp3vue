@@ -7,26 +7,12 @@
     />
     <button id="cancionBuscar" @click="buscarCancion">BUSCAR</button>
   </div>
-  <div :key="cancion" v-for="cancion in canciones" class="playlist">
-    <p>
-      <span id="title">Nombre: </span>
-      {{ cancion.title }}
-    </p>
-    <p>
-      <span id="artist">Artista: </span>
-      {{ cancion["artist-credit"][0].name }}
-    </p>
-    <p>
-      <span id="time">Duración: </span>
-      {{ cancion.length / 1000 }}
-    </p>
-    <i class="uil uil-play-circle"></i>
-  </div>
+  <SongCard :canciones="canciones"></SongCard>
 </template>
 
 <script>
 import service from "@/services/apis.js";
-
+import SongCard from "@/components/songCard.vue";
 export default {
   name: "HelloWorld",
   props: {
@@ -44,6 +30,9 @@ export default {
         this.canciones = response.data.recordings;
       });
     },
+  },
+  components: {
+    SongCard,
   },
 };
 </script>
