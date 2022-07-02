@@ -7,24 +7,26 @@
     />
     <button id="cancionBuscar" @click="buscarCancion">BUSCAR</button>
   </div>
-  <div class="playlist">
+  <div :key="cancion" v-for="cancion in canciones" class="playlist">
     <p>
       <span id="title">Nombre: </span>
-      askdsakof
+      {{ cancion.title }}
     </p>
     <p>
       <span id="artist">Artista: </span>
-      martin garris
+      {{ cancion["artist-credit"][0].name }}
     </p>
     <p>
       <span id="time">Duración: </span>
-      5:03 mins
+      {{ cancion.length / 1000 }}
     </p>
     <i class="uil uil-play-circle"></i>
   </div>
 </template>
 
 <script>
+import service from "@/services/apis.js";
+
 export default {
   name: "HelloWorld",
   props: {
@@ -38,7 +40,9 @@ export default {
   },
   methods: {
     buscarCancion() {
-      alert(this.busqueda);
+      service.getCanciones(this.busqueda).then((response) => {
+        this.canciones = response.data.recordings;
+      });
     },
   },
 };
