@@ -56,7 +56,7 @@ a {
   color: #42b983;
 }
 .songCard {
-  border: 1px solid black;
+  border: 1px solid rgb(128, 128, 128);
   margin-left: 200px;
   margin-right: 200px;
   border-radius: 5px;

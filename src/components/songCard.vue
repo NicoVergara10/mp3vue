@@ -50,6 +50,6 @@ export default {
   padding-bottom: 25%;
 }
 .img > i {
-  font-size: 250%;
+  font-size: 550%;
 }
 </style>

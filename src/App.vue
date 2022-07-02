@@ -14,6 +14,9 @@
   margin: 0;
   width: 100%;
 }
+header {
+  margin-top: 1rem;
+}
 body {
   background-image: url(./assets/Fondoapp.jpg);
   margin: 0;
