@@ -1,7 +1,11 @@
 <template>
   <div class="search">
-    <input type="search" v-model="busqueda" placeholder="Ingrese canción a buscar" />
-    <button id="cancionBuscar" @click="buscarCancion"> BUSCAR</button>
+    <input
+      type="search"
+      v-model="busqueda"
+      placeholder="Ingrese canción a buscar"
+    />
+    <button id="cancionBuscar" @click="buscarCancion">BUSCAR</button>
   </div>
   <div class="playlist">
     <p>
@@ -28,19 +32,16 @@ export default {
   },
   data() {
     return {
-      busqueda: '',
-      canciones: [
-
-      ]
-    }
+      busqueda: "",
+      canciones: [],
+    };
   },
-  methods:{
-    buscarCancion(){
-      alert(this.busqueda)
-    }
-  }
-}
-
+  methods: {
+    buscarCancion() {
+      alert(this.busqueda);
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
